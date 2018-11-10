@@ -47,3 +47,6 @@ resources/signing
 
 # lock-file
 package-lock.json
+
+# Ignore node version
+.node-version
