@@ -37,3 +37,13 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Cordova
+/platforms
+/plugins
+
+# res
+resources/signing
+
+# lock-file
+package-lock.json
