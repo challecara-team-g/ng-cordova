@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { TaskplusComponent } from './taskplus/taskplus.component';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { MenuService } from './menu.service';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,13 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
   ],
   entryComponents: [
     HomeComponent,
-    MenuComponent,
-    TaskplusComponent
+    MenuComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   ],
-  providers: [],
+  providers: [MenuService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
