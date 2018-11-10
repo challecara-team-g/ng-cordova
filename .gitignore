@@ -41,6 +41,7 @@ Thumbs.db
 # Cordova
 /platforms
 /plugins
+www/
 
 # res
 resources/signing
