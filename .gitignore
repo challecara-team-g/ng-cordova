@@ -42,6 +42,8 @@ Thumbs.db
 /platforms
 /plugins
 www/
+www.bak/
+package.json.bak
 
 # res
 resources/signing
