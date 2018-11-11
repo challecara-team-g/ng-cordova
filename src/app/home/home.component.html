@@ -1,29 +1,31 @@
-<ons-toolbar>
-  <div class="center">
-    <ons-select>
-      <option *ngFor="let week of weeks">{{week.day}}</option>
-    </ons-select>
-  </div>
-  <div class="left">
-    <ons-toolbar-button (click)="openMenu()">
-      <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
-    </ons-toolbar-button>
-  </div>
-  <div class="right">
-    <ons-toolbar-button (click)="app.load('taskplus')">
-      <ons-icon icon="fa-plus"></ons-icon>
-    </ons-toolbar-button>
-  </div>
-</ons-toolbar>
-
-<div class="background"></div>
-<div class="content">
-    <div class="blank"></div>
-  <div *ngFor="let task of tasks" modifier="task">
-    <ons-button >
-      <p>{{task.picture}}</p>
-      <p>{{task.title}}</p>
-      <p>{{task.user_id}}</p>
-    </ons-button>
-  </div>
-</div>
+<ons-page>
+    <ons-toolbar>
+        <div class="center">
+          <ons-select>
+            <option *ngFor="let week of weeks">{{week.day}}</option>
+          </ons-select>
+        </div>
+        <div class="left">
+          <ons-toolbar-button (click)="openMenu()">
+            <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="right">
+          <ons-toolbar-button (click)="app.load('taskplus')">
+            <ons-icon icon="fa-plus"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+      
+      <div class="background"></div>
+      <div class="content">
+          <div class="blank"></div>
+        <div *ngFor="let task of tasks" modifier="task">
+          <ons-button >
+            <p>{{task.picture}}</p>
+            <p>{{task.title}}</p>
+            <p>{{task.user_id}}</p>
+          </ons-button>
+        </div>
+      </div>
+</ons-page>
