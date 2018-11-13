@@ -7,7 +7,7 @@ import { OnsNavigator } from 'ngx-onsenui';
 import { TaskplusComponent } from '../taskplus/taskplus.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'ons-page[app-home]',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
