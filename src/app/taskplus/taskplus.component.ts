@@ -1,5 +1,7 @@
 import { Component, OnInit, Inject, forwardRef } from '@angular/core';
-import { AppComponent } from '../app.component';
+
+import { Params, OnsNavigator } from 'ngx-onsenui';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-taskplus',
@@ -8,9 +10,13 @@ import { AppComponent } from '../app.component';
 })
 export class TaskplusComponent implements OnInit {
 
-  constructor() { }
-  // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }
+  constructor(private navi: OnsNavigator,
+    private params: Params) { }
+  // constructor(@Inject(forwardRef(() => AppComponent)) privcate app : AppComponent) { }
 
+  pop() {
+    this.navi.nativeElement.popPage();
+  }
   ngOnInit() {
   }
 

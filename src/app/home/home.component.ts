@@ -3,6 +3,8 @@ import { AppComponent } from '../app.component';
 import { WEEK } from '../mock-weeks';
 import { TASKCONTENT } from '../mock-taskcontents';
 import { MenuService } from '../menu.service';
+import { OnsNavigator } from 'ngx-onsenui';
+import { TaskplusComponent } from '../taskplus/taskplus.component';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +15,14 @@ export class HomeComponent implements OnInit {
   weeks=WEEK;
   tasks=TASKCONTENT;
   
-  constructor(private menuService: MenuService) { }
+  constructor(private menuService: MenuService,private navi: OnsNavigator) { }
   openMenu() {
     this.menuService.open();
   }
   // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }
-
+  push() {
+    this.navi.nativeElement.pushPage(TaskplusComponent);
+  }
   ngOnInit() {
   }
 

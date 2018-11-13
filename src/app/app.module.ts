@@ -11,23 +11,29 @@ import { MenuComponent } from './menu/menu.component';
 import { TaskplusComponent } from './taskplus/taskplus.component';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { MenuService } from './menu.service';
+import { FormsModule } from '@angular/forms';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    TaskplusComponent
+    TaskplusComponent,
+    ContentComponent
   ],
   imports: [
     OnsenModule, // has BrowserModule internally
     HttpModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   entryComponents: [
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    TaskplusComponent,
+    ContentComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
