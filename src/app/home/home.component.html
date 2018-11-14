@@ -2,7 +2,14 @@
 <ons-toolbar>
   <div class="center">
     <ons-select>
-      <option *ngFor="let week of weeks">{{week.day}}</option>
+      <!--<option *ngFor="let week of weeks">{{week.day}}</option>-->
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+      <option>Sunday</option>
     </ons-select>
   </div>
   <div class="left">
@@ -19,7 +26,7 @@
 
 <div class="background"></div>
 <div class="content">
-    <div class="blank"></div>
+  <div class="blank"></div>
   <div *ngFor="let task of tasks" modifier="task">
     <ons-button >
       <p>{{task.picture}}</p>
