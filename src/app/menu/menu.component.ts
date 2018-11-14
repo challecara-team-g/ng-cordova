@@ -1,5 +1,6 @@
-import { Component, OnInit, Inject, forwardRef } from '@angular/core';
-import { AppComponent } from '../app.component';
+import { Component, OnInit} from '@angular/core';
+import { OnsNavigator } from 'ngx-onsenui';
+import { MypageComponent } from '../mypage/mypage.component';
 
 @Component({
   selector: 'ons-page[app-menu]',
@@ -8,8 +9,12 @@ import { AppComponent } from '../app.component';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navi: OnsNavigator) { }
   // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }
+
+  push() {
+    this.navi.nativeElement.pushPage(MypageComponent);
+  }
 
   ngOnInit() {
   }

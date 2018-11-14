@@ -2,9 +2,6 @@
 <ons-toolbar>
   <div class="left">
     <ons-back-button>Back</ons-back-button>
-    <!---<ons-toolbar-button (click)="pop()">
-      <ons-icon icon="fa-long-arrow-left"></ons-icon>
-   </ons-toolbar-button>-->
  </div>
 </ons-toolbar>
 <body>
@@ -19,6 +16,6 @@
    <p class="comment">Comment</p>
    <textarea class="comment" id=""></textarea>
  </div>
- <ons-button class="make">Complete</ons-button>
+ <ons-button class="make" (click)="pop()">Complete</ons-button>
 </div>
 </body>  

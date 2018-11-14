@@ -4,6 +4,7 @@ import {MenuComponent} from './menu/menu.component';
 
 import { MenuService } from './menu.service';
 import { ContentComponent } from './content/content.component';
+import { MenuContentComponent } from './menu-content/menu-content.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,7 +13,7 @@ import { ContentComponent } from './content/content.component';
 export class AppComponent {
   
   
-  menu = MenuComponent;
+  menu = MenuContentComponent;
   content = ContentComponent;
   @ViewChild('splitter') splitter;
   constructor(private menuService: MenuService) {
