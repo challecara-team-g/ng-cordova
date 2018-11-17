@@ -7,7 +7,7 @@ import { ContentComponent } from './content/content.component';
 import { OnsSplitterContent, OnsSplitterSide } from 'ngx-onsenui';
 
 @Component({
-  selector: 'ons-page[app-root]',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
