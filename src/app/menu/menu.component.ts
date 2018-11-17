@@ -9,11 +9,8 @@ import {MenuService} from '../menu.service'
 })
 export class MenuComponent implements OnInit {
 
-
-  menus = [
-    { name: 'mypage', component: MyPageComponent },
-   
-  ]
+  mypage=MyPageComponent;
+  
 
   constructor(private menuService: MenuService) { }
   // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }
