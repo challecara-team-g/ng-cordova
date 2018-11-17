@@ -13,6 +13,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { MenuService } from './menu.service';
 import { FormsModule } from '@angular/forms';
 import { ContentComponent } from './content/content.component';
+import { MyPageComponent } from './my-page/my-page.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContentComponent } from './content/content.component';
     HomeComponent,
     MenuComponent,
     TaskplusComponent,
-    ContentComponent
+    ContentComponent,
+    MyPageComponent
   ],
   imports: [
     OnsenModule, // has BrowserModule internally
@@ -33,7 +35,8 @@ import { ContentComponent } from './content/content.component';
     HomeComponent,
     MenuComponent,
     TaskplusComponent,
-    ContentComponent
+    ContentComponent,
+    MyPageComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

@@ -1,7 +1,7 @@
-<ons-splitter #splitter>
-  <ons-splitter-side [page]="menu" side="left" width="237px" collapse>
+<ons-splitter >
+  <ons-splitter-side [page]="sidePage" #side side="left" width="237px" collapse>
   </ons-splitter-side>
 
-  <ons-splitter-content [page]="content">
+  <ons-splitter-content [page]="contentPage" #content>
   </ons-splitter-content>
 </ons-splitter>

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   
   constructor(private menuService: MenuService,private navi: OnsNavigator) { }
   openMenu() {
-    this.menuService.open();
+    this.menuService.openMenu();
   }
   // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }
   push() {

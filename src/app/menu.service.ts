@@ -1,15 +1,33 @@
 import { Injectable } from '@angular/core';
-import { Subject, Observable } from 'rxjs';
+import { ReplaySubject } from 'rxjs';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class MenuService {
+  private readonly _menu = new ReplaySubject<boolean>(1);
+  private readonly _loadComponent = new ReplaySubject<any>(1);
 
   constructor() { }
-  subject = new Subject();
-  get menu$(): Observable<any> {
-    return this.subject.asObservable();
+
+  get menu$() {
+    return this._menu.asObservable();
   }
-  open() {
-    this.subject.next();
+
+  openMenu() {
+    this._menu.next(true);
   }
+
+  closeMenu() {
+    this._menu.next(false);
+  }
+
+  get loadComponent$() {
+    return this._loadComponent.asObservable();
+  }
+
+  loadComponent(component: any) {
+    this._loadComponent.next(component);
+  }
+
 }
