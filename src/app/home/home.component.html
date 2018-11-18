@@ -28,7 +28,7 @@
 <div class="content">
   <div class="blank"></div>
   <div [ngSwitch]="WeekValue">
-    <div *ngSwitchCase="'1'">
+    <div *ngSwitchCase="'0'">
       <div *ngFor="let task of tasks" modifier="task">
         <ons-button >
           <p>{{task.picture}}</p>
@@ -38,7 +38,7 @@
       </div>
     </div>
 
-    <div *ngSwitchCase="'2'">Test2</div>
+    <div *ngSwitchCase="'1'">Test2</div>
       
   </div>
 </div>
