@@ -57,6 +57,7 @@
       </div>
     </div>
 
+
     <!--火曜日のタスク表示-->
     <div *ngSwitchCase="'1'">
 
@@ -73,6 +74,7 @@
         </div>
       </div>
     </div>
+
 
     <!--水曜日のタスク表示-->
     <div *ngSwitchCase="'2'">
@@ -91,6 +93,7 @@
       </div>
     </div>
 
+
     <!--木曜日のタスク表示-->
     <div *ngSwitchCase="'3'">
 
@@ -107,6 +110,7 @@
         </div>
       </div>
     </div>
+
 
     <!--金曜日のタスク表示-->
     <div *ngSwitchCase="'4'">
@@ -125,6 +129,7 @@
       </div>
     </div>
 
+
     <!--土曜日のタスク表示-->
     <div *ngSwitchCase="'5'">
 
@@ -142,12 +147,13 @@
       </div>
     </div>
 
+
     <!--日曜日のタスク表示-->
     <div *ngSwitchCase="'6'">
 
       <!--遷移確認用-->
       <p>日曜日</p>
-      
+
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==6">
           <ons-button >
@@ -159,6 +165,10 @@
       </div>
     </div>
 
+    <div *ngSwitchDefault>
+      <p>↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
+      <p>Select Week!!!</p>
+    </div>
   </div>
 </div>
 
