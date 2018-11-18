@@ -1,6 +1,9 @@
 
+<!--上にあるツールバーの内容-->
 <ons-toolbar>
   <div class="center">
+
+    <!--曜日選択の表示-->
     <ons-select [(ngModel)]="WeekValue">
       <!--<option *ngFor="let week of weeks">{{week.day}}</option>-->
       <option value="0">Monday</option>
@@ -12,11 +15,15 @@
       <option value="6">Sunday</option>
     </ons-select>
   </div>
+
+  <!--タスクの追加画面への遷移のボタン-->
   <div class="left">
     <ons-toolbar-button (click)="openMenu()">
       <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
     </ons-toolbar-button>
   </div>
+
+  <!--サイドバーへの遷移のボタン-->
   <div class="right">
     <ons-toolbar-button (click)="push()">
       <ons-icon icon="fa-plus"></ons-icon>
@@ -24,22 +31,106 @@
   </div>
 </ons-toolbar>
 
+
+<!--タスク一覧などを表示する部分-->
 <div class="background"></div>
 <div class="content">
   <div class="blank"></div>
+
+  <!--選択された曜日のタスクの表示-->
   <div [ngSwitch]="WeekValue">
+
+    <!--月曜日のタスク表示-->
     <div *ngSwitchCase="'0'">
-      <div *ngFor="let task of tasks" modifier="task">
-        <ons-button >
-          <p>{{task.picture}}</p>
-          <p>{{task.title}}</p>
-          <p>{{task.user_id}}</p>
-        </ons-button>
+      <div *ngFor="let task of tasks">
+        <div *ngIf="task.day_of_week==0">
+          <ons-button >
+            <p>{{task.picture}}</p>
+            <p>{{task.title}}</p>
+            <p>{{task.user_id}}</p>
+          </ons-button>
+        </div>
       </div>
     </div>
 
-    <div *ngSwitchCase="'1'">Test2</div>
-      
+    <!--火曜日のタスク表示-->
+    <div *ngSwitchCase="'1'">
+      <div *ngFor="let task of tasks">
+        <div *ngIf="task.day_of_week==1">
+          <ons-button >
+            <p>{{task.picture}}</p>
+            <p>{{task.title}}</p>
+            <p>{{task.user_id}}</p>
+          </ons-button>
+        </div>
+      </div>
+    </div>
+
+    <!--水曜日のタスク表示-->
+    <div *ngSwitchCase="'2'">
+      <div *ngFor="let task of tasks">
+        <div *ngIf="task.day_of_week==2">
+          <ons-button >
+            <p>{{task.picture}}</p>
+            <p>{{task.title}}</p>
+            <p>{{task.user_id}}</p>
+          </ons-button>
+        </div>
+      </div>
+    </div>
+
+    <!--木曜日のタスク表示-->
+    <div *ngSwitchCase="'3'">
+      <div *ngFor="let task of tasks">
+        <div *ngIf="task.day_of_week==3">
+          <ons-button >
+            <p>{{task.picture}}</p>
+            <p>{{task.title}}</p>
+            <p>{{task.user_id}}</p>
+          </ons-button>
+        </div>
+      </div>
+    </div>
+
+    <!--金曜日のタスク表示-->
+    <div *ngSwitchCase="'4'">
+      <div *ngFor="let task of tasks">
+        <div *ngIf="task.day_of_week==4">
+          <ons-button >
+            <p>{{task.picture}}</p>
+            <p>{{task.title}}</p>
+            <p>{{task.user_id}}</p>
+          </ons-button>
+        </div>
+      </div>
+    </div>
+
+    <!--土曜日のタスク表示-->
+    <div *ngSwitchCase="'5'">
+      <div *ngFor="let task of tasks">
+        <div *ngIf="task.day_of_week==5">
+          <ons-button >
+            <p>{{task.picture}}</p>
+            <p>{{task.title}}</p>
+            <p>{{task.user_id}}</p>
+          </ons-button>
+        </div>
+      </div>
+    </div>
+
+    <!--日曜日のタスク表示-->
+    <div *ngSwitchCase="'6'">
+      <div *ngFor="let task of tasks">
+        <div *ngIf="task.day_of_week==6">
+          <ons-button >
+            <p>{{task.picture}}</p>
+            <p>{{task.title}}</p>
+            <p>{{task.user_id}}</p>
+          </ons-button>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
