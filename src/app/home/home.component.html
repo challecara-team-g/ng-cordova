@@ -48,7 +48,7 @@
 
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==0">
-          <ons-button >
+          <ons-button (click)="push()">
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -66,7 +66,7 @@
 
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==1">
-          <ons-button >
+          <ons-button (click)="push()">
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -84,7 +84,7 @@
 
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==2">
-          <ons-button >
+          <ons-button (click)="push()">
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -102,7 +102,7 @@
 
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==3">
-          <ons-button >
+          <ons-button (click)="push()">
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -120,7 +120,7 @@
 
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==4">
-          <ons-button >
+          <ons-button (click)="push()">
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -138,7 +138,7 @@
 
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==5">
-          <ons-button >
+          <ons-button (click)="push()">
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -156,7 +156,7 @@
 
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==6">
-          <ons-button >
+          <ons-button (click)="push()">
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -164,11 +164,13 @@
         </div>
       </div>
     </div>
-
+    
+    <!-- デフォルトでの表示 -->
     <div *ngSwitchDefault>
       <p>↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
-      <p>Select Week!!!</p>
+      <p>Please Select Week!!!</p>
     </div>
+
   </div>
 </div>
 
