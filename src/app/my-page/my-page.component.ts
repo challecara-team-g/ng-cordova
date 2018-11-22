@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 import { HomeComponent } from '../home/home.component';
+import { ContentComponent } from '../content/content.component';
 
 @Component({
   selector: 'ons-page[app-my-page]',
@@ -15,6 +16,6 @@ import { HomeComponent } from '../home/home.component';
   ngOnInit() {
   }
   load(component: any) {
-    this.menuService.loadComponent(component);
+    this.menuService.loadComponent(ContentComponent);
   }
 }
