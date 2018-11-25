@@ -17,7 +17,7 @@ export class TaskplusComponent implements OnInit {
   constructor(private navi: OnsNavigator,
     private params: Params,
     private goodsPassService:GoodsPassService) { 
-      // this.taskinfo=goodsPassService.getGoods();
+      this.taskinfo=goodsPassService.getGoods();
     }
   // constructor(@Inject(forwardRef(() => AppComponent)) privcate app : AppComponent) { }
 
