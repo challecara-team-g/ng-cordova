@@ -12,13 +12,8 @@ import { TaskContent } from '../task-content';
 })
 export class TaskplusComponent implements OnInit {
 
-  taskinfo:TaskContent;
-
   constructor(private navi: OnsNavigator,
-    private params: Params,
-    private goodsPassService:GoodsPassService) { 
-      this.taskinfo=goodsPassService.getGoods();
-    }
+    private params: Params) {}
   // constructor(@Inject(forwardRef(() => AppComponent)) privcate app : AppComponent) { }
 
   pop() {
@@ -28,4 +23,13 @@ export class TaskplusComponent implements OnInit {
   ngOnInit() {
   }
 
+}
+
+export class TaskInfo2 {
+  
+  taskinfo:TaskContent;
+
+  constructor(private goodsPassService:GoodsPassService){
+    this.taskinfo=goodsPassService.getGoods();
+  }
 }
