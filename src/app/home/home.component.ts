@@ -51,7 +51,7 @@ export class TaskInfo{
     }
 
     // this.taskinfo=fb.group({
-
+      
     // })
   }
   goodsPassSet(){
