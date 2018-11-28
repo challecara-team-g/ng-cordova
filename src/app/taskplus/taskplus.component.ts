@@ -1,7 +1,6 @@
 import { Component, OnInit, Inject, forwardRef } from '@angular/core';
-
 import { Params, OnsNavigator } from 'ngx-onsenui';
-import { HomeComponent } from '../home/home.component';
+
 
 @Component({
   selector: 'ons-page[app-taskplus]',

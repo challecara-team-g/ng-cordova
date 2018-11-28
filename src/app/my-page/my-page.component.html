@@ -17,21 +17,10 @@
   <p >@User</p>
 </div>
 <p class="works">Works</p>
-<div class="task"> 
-  <ons-button>
-    <p class="task">icon</p>
-    <p class="task">title</p>
-  </ons-button>
-  <ons-button>
-  </ons-button>
-  <ons-button>
-    </ons-button>
-    <ons-button>
+  <div class="task" *ngFor="let task of tasks">
+      <ons-button *ngIf="task.user_id=='Kobayashi'">
+        <p class="task">{{task.title}}</p>
+        <p class="task">{{task.user_id}}</p>
       </ons-button>
-      <ons-button>
-      </ons-button>
-      <ons-button>
-      </ons-button>
-      <ons-button>
-      </ons-button>
-</div>
+  </div>
+ 

@@ -35,7 +35,7 @@ div.task{
     top: -80px;
 }
 ons-button{
-    
+    position: relative;
     display: inline-block;
     box-sizing: border-box;
     width: 25%;
@@ -43,9 +43,9 @@ ons-button{
     background: #F4F4F4;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     border-radius: 14px;
-    
-    margin: 14px;
-}
+    float:left;
+    margin: 15px;
+    }
 p.task{
     color: black;
 }
