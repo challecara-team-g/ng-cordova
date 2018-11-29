@@ -1,7 +1,10 @@
 export class TaskContent{
   id:number;
   day_of_week:number;
-  picture:string;
   title:string;
-  user_id:string;
+  detail:string;
+  group_id:string;
+  // create_at:Date;
+  // update_at:Date;
+  icon_id:string;
 }

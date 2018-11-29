@@ -46,9 +46,9 @@
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==0">
           <ons-button (click)="push()">
-            <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
-            <p>{{task.user_id}}</p>
+            <p>{{task.detail}}</p>
+            <p>{{task.group_id}}</p>
           </ons-button>
         </div>
       </div>
@@ -102,8 +102,8 @@
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==4">
           <ons-button (click)="push()">
-            <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
+            <p>{{task.detail}}</p>
             <p>{{task.user_id}}</p>
           </ons-button>
         </div>
@@ -147,4 +147,3 @@
   </div>
 </div>
 <!--タスクの一覧のページの内容はここまで-->
-
