@@ -8,10 +8,18 @@
     <p class="id">id</p>
   </ons-button>
 
-  <ons-button class="Group">
-    <div class="picture">
-      picture2
-    </div>
-    <p>Groupname1</p>
-  </ons-button>
+
+  <!-- ngForするのはユーザーの所属しているグループ -->
+  <div *ngFor="let task of tasks">
+
+    <!-- ↓↓↓↓ここにクリックイベント書きたい！！↓↓↓↓ -->
+    <ons-button class="Group">
+      <div class="picture">
+        picture
+      </div>
+      <p>Groupname</p>
+    </ons-button>
+
+  </div>
+  
 </div>
