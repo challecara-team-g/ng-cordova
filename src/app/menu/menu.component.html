@@ -13,7 +13,7 @@
   <div *ngFor="let task of tasks">
 
     <!-- ↓↓↓↓ここにクリックイベント書きたい！！↓↓↓↓ -->
-    <ons-button class="Group">
+    <ons-button class="Group" (click)="load(home)">
       <div class="picture">
         picture
       </div>
