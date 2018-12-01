@@ -4,6 +4,7 @@ import { MyPageComponent } from '../my-page/my-page.component';
 import {MenuService} from '../menu.service';
 import { TASKCONTENT } from '../mock-taskcontents';
 import { ContentComponent } from '../content/content.component';
+import { USERS } from '../mock-users'
 
 @Component({
   selector: 'ons-page[app-menu]',
@@ -14,6 +15,7 @@ export class MenuComponent implements OnInit {
   home=ContentComponent;
   mypage=MyPageComponent;
   tasks=TASKCONTENT;
+  users=USERS;
 
   constructor(private menuService: MenuService) { }
   // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }

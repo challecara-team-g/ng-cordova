@@ -10,14 +10,15 @@
 
 
   <!-- ngForするのはユーザーの所属しているグループ -->
-  <div *ngFor="let task of tasks">
+  <div *ngFor="let user of users">
 
     <!-- ↓↓↓↓ここにクリックイベント書きたい！！↓↓↓↓ -->
     <ons-button class="Group" (click)="load(home)">
       <div class="picture">
         picture
       </div>
-      <p>Groupname</p>
+      <p class="id">{{user.group_id}}</p>
+      <p class="name">{{user.name}}</p>
     </ons-button>
 
   </div>
