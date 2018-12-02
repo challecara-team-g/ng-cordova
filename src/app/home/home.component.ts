@@ -14,8 +14,9 @@ import { TaskplusComponent } from '../taskplus/taskplus.component';
 export class HomeComponent implements OnInit {
   weeks=WEEK;
   tasks=TASKCONTENT;
+  date = new Date();
+  constructor(private menuService: MenuService,private navi: OnsNavigator) {}
   
-  constructor(private menuService: MenuService,private navi: OnsNavigator) { }
   openMenu() {
     this.menuService.openMenu();
   }
