@@ -18,7 +18,7 @@
 </div>
 <p class="works">Works</p>
 <div class="task" *ngFor="let task of tasks">
-  <ons-button *ngIf="task.user_id=='Kobayashi'">
+  <ons-button>
     <p class="task">{{task.title}}</p>
     <p class="task">{{task.user_id}}</p>
   </ons-button>
