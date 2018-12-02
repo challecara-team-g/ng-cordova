@@ -14,6 +14,7 @@ import { MenuService } from './menu.service';
 import { FormsModule } from '@angular/forms';
 import { ContentComponent } from './content/content.component';
 import { MyPageComponent } from './my-page/my-page.component';
+import { TaskeditComponent } from './taskedit/taskedit.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MyPageComponent } from './my-page/my-page.component';
     MenuComponent,
     TaskplusComponent,
     ContentComponent,
-    MyPageComponent
+    MyPageComponent,
+    TaskeditComponent
   ],
   imports: [
     OnsenModule, // has BrowserModule internally
@@ -36,7 +38,8 @@ import { MyPageComponent } from './my-page/my-page.component';
     MenuComponent,
     TaskplusComponent,
     ContentComponent,
-    MyPageComponent
+    MyPageComponent,
+    TaskeditComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

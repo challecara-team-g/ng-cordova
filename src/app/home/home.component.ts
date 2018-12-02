@@ -5,6 +5,7 @@ import { TASKCONTENT } from '../mock-taskcontents';
 import { MenuService } from '../menu.service';
 import { OnsNavigator } from 'ngx-onsenui';
 import { TaskplusComponent } from '../taskplus/taskplus.component';
+import { TaskeditComponent } from '../taskedit/taskedit.component';
 
 @Component({
   selector: 'ons-page[app-home]',
@@ -16,15 +17,16 @@ export class HomeComponent implements OnInit {
   tasks=TASKCONTENT;
   date = new Date();
   dayOfWeek = this.date.getDay();
-
+  taskplus=TaskplusComponent;
+  taskedit=TaskeditComponent;
   constructor(private menuService: MenuService,private navi: OnsNavigator) {}
   
   openMenu() {
     this.menuService.openMenu();
   }
   // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }
-  push() {
-    this.navi.nativeElement.pushPage(TaskplusComponent);
+  push(component: any) {
+    this.navi.nativeElement.pushPage(component);
   }
   ngOnInit() {
   }
