@@ -8,7 +8,9 @@ import { TASKCONTENT } from '../mock-taskcontents';
 })
 export class TaskeditComponent implements OnInit {
   constructor(private navi: OnsNavigator,
-    private params: Params) { }
+    private params: Params) { 
+      console.log(params.data);
+    }
   // constructor(@Inject(forwardRef(() => AppComponent)) privcate app : AppComponent) { }
 
   pop() {

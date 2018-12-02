@@ -45,7 +45,7 @@
     <div *ngSwitchCase="'0'">
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==0">
-          <ons-button (click)="pushtaskedit()" >
+          <ons-button (click)="pushtaskedit(task)" >
             <p>{{task.title}}</p>
             <p>{{task.detail}}</p>
             <p>{{task.group_id}}</p>

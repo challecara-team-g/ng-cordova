@@ -28,8 +28,9 @@ export class HomeComponent implements OnInit {
     
     this.navi.nativeElement.pushPage(TaskplusComponent);
   }
-  pushtaskedit() {
-    this.navi.nativeElement.pushPage(TaskeditComponent);
+  pushtaskedit(task){
+    var data=task;
+    this.navi.nativeElement.pushPage(TaskeditComponent,{data});
   }
   ngOnInit() {
   }
