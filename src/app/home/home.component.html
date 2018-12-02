@@ -4,15 +4,15 @@
   <div class="center">
 
     <!--曜日選択の表示-->
-    <ons-select [(ngModel)]="WeekValue">
+    <ons-select [(ngModel)]="dayOfWeek">
       <!--<option *ngFor="let week of weeks">{{week.day}}</option>-->
-      <option value="0">Monday</option>
-      <option value="1">Tuesday</option>
-      <option value="2">Wednesday</option>
-      <option value="3">Thursday</option>
-      <option value="4">Friday</option>
-      <option value="5">Saturday</option>
-      <option value="6">Sunday</option>
+      <option value="0">Sunday</option>
+      <option value="1">Monday</option>
+      <option value="2">Tuesday</option>
+      <option value="3">Wednesday</option>
+      <option value="4">Thursday</option>
+      <option value="5">Friday</option>
+      <option value="6">Saturday</option>
     </ons-select>
   </div>
 
@@ -39,7 +39,7 @@
   <div class="blank"></div>
 
   <!--選択された曜日のタスクの表示-->
-  <div [ngSwitch]="WeekValue">
+  <div [ngSwitch]="dayOfWeek">
 
     <!--月曜日のタスク表示-->
     <div *ngSwitchCase="'0'">
@@ -136,12 +136,6 @@
           </ons-button>
         </div>
       </div>
-    </div>
-    
-    <!-- デフォルトでの表示 -->
-    <div *ngSwitchDefault>
-      <p>{{date | date: 'EE'}}</p>
-      <p>Please Select Week!!!</p>
     </div>
 
   </div>

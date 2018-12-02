@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
   weeks=WEEK;
   tasks=TASKCONTENT;
   date = new Date();
+  dayOfWeek = this.date.getDay();
+
   constructor(private menuService: MenuService,private navi: OnsNavigator) {}
   
   openMenu() {
