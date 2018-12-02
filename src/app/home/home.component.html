@@ -25,7 +25,7 @@
 
   <!--サイドバーへの遷移のボタン-->
   <div class="right">
-    <ons-toolbar-button (click)="push(taskplus)">
+    <ons-toolbar-button (click)="pushtaskplus()" >
       <ons-icon icon="fa-plus"></ons-icon>
     </ons-toolbar-button>
   </div>
@@ -45,7 +45,7 @@
     <div *ngSwitchCase="'0'">
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==0">
-          <ons-button (click)="push(taskedit)">
+          <ons-button (click)="pushtaskedit()" >
             <p>{{task.title}}</p>
             <p>{{task.detail}}</p>
             <p>{{task.group_id}}</p>
@@ -59,7 +59,7 @@
     <div *ngSwitchCase="'1'">
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==1">
-          <ons-button (click)="push(taskedit)">
+          <ons-button (click)="pushtaskedit()" >
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -73,7 +73,7 @@
     <div *ngSwitchCase="'2'">
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==2">
-          <ons-button (click)="push(taskedit)">
+          <ons-button (click)="pushtaskedit()" >
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -87,7 +87,7 @@
     <div *ngSwitchCase="'3'">
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==3">
-          <ons-button (click)="push(taskedit)">
+          <ons-button (click)="pushtaskedit()" >
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -101,7 +101,7 @@
     <div *ngSwitchCase="'4'">
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==4">
-          <ons-button (click)="push(taskedit)">
+          <ons-button (click)="pushtaskedit()" >
             <p>{{task.title}}</p>
             <p>{{task.detail}}</p>
             <p>{{task.user_id}}</p>
@@ -115,7 +115,7 @@
     <div *ngSwitchCase="'5'">
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==5">
-          <ons-button (click)="push(taskedit)">
+          <ons-button (click)="pushtaskedit()" >
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>
@@ -129,7 +129,7 @@
     <div *ngSwitchCase="'6'">
       <div *ngFor="let task of tasks">
         <div *ngIf="task.day_of_week==6">
-          <ons-button (click)="push(taskedit)">
+          <ons-button (click)="pushtaskedit()" >
             <p>{{task.picture}}</p>
             <p>{{task.title}}</p>
             <p>{{task.user_id}}</p>

@@ -17,16 +17,19 @@ export class HomeComponent implements OnInit {
   tasks=TASKCONTENT;
   date = new Date();
   dayOfWeek = this.date.getDay();
-  taskplus=TaskplusComponent;
-  taskedit=TaskeditComponent;
   constructor(private menuService: MenuService,private navi: OnsNavigator) {}
   
   openMenu() {
     this.menuService.openMenu();
   }
+ 
   // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }
-  push(component: any) {
-    this.navi.nativeElement.pushPage(component);
+  pushtaskplus() {
+    
+    this.navi.nativeElement.pushPage(TaskplusComponent);
+  }
+  pushtaskedit() {
+    this.navi.nativeElement.pushPage(TaskeditComponent);
   }
   ngOnInit() {
   }
