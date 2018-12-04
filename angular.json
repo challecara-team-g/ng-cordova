@@ -61,7 +61,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "task-manager:build"
+            "browserTarget": "task-manager:build",
+            "ssl": true,
+            "sslKey": "ssl/server.key",
+            "sslCert": "ssl/server.crt",
+            "disableHostCheck": true
           },
           "configurations": {
             "production": {
