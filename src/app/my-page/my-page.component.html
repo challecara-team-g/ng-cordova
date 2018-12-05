@@ -12,16 +12,16 @@
 <div class="circle">
   <div class="icon"></div>
 </div>
-<div class="name">
-  <p class="name">Display Name</p>
+<div class="user-info">
+  <p class="user-info__name">Display Name</p>
   <p >@User</p>
-</div>
-<p class="works">Works</p>
-<div class="task">
-  <div class="task__item" *ngFor="let task of tasks">
-    <ons-button>
-      <p class="task">{{task.title}}</p>
-      <p class="task">{{task.user_id}}</p>
-    </ons-button>
+  <p class="user-info__works">Works</p>
+  <div class="user-info__task">
+    <div class="user-info__task-item" *ngFor="let task of tasks">
+      <ons-button>
+        <p class="user-info__task-title">{{task.title}}</p>
+        <p class="user-info__task-id">{{task.user_id}}</p>
+      </ons-button>
+    </div>
   </div>
 </div>
