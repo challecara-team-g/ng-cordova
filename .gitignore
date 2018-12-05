@@ -56,3 +56,6 @@ package-lock.json
 
 # Ignore secure
 .string.js
+
+# Ignore ssl
+ssl
