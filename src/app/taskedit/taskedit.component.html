@@ -11,15 +11,14 @@
   </div>
 </ons-toolbar>
 <div id="wrap">
-  <div class="box">
-    <div class="icon">
-    </div>
-    <p class="title">Title</p>
-    <input type="text" class="title" [(ngModel)]="params.data.title">
-    <p class="user">AssignUser</p>
-    <input type="text" class="user" [(ngModel)]="params.data.assign_user">
-    <p class="comment">Comment</p>
-    <textarea class="comment" id=""></textarea>
+  <div class="task">
+    <div class="task__icon"></div>
+    <p class="task__title">Title</p>
+    <input type="text" class="task__title-input" [(ngModel)]="params.data.title">
+    <p class="task__user">AssignUser</p>
+    <input type="text" class="task__user-input" [(ngModel)]="params.data.assign_user">
+    <p class="task__comment">Comment</p>
+    <textarea class="task__comment-input" id="" [(ngModel)]="params.data.comment"></textarea>
   </div>
-  <ons-button class="make" (click)="pop()">Complete</ons-button>
+  <ons-button class="task__make" (click)="pop()">Complete</ons-button>
 </div>

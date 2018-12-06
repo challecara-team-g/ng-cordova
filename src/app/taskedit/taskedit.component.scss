@@ -1,95 +1,89 @@
 body{
-    width:100%; /*ページ全体の幅は100%と指定する*/
-    text-align:center; /*ページ全体を中央揃えにする*/
-  }
-  #wrap{
-    width: 320px;	   /*全体の幅を指定する*/
-    margin: 0 auto;    /*マージンの指定をする、ブラウザ対策*/
-    text-align:center;   /*全体を左揃えにする。*/
-  }
-  div.box{
-    position: absolute;
-    width: 320px;
-    height: 427px;
-  
-    top: 65px;
-  
-    background: #277FBF;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 8px;
-  }
-  div.icon{
+  width:100%; /*ページ全体の幅は100%と指定する*/
+  text-align:center; /*ページ全体を中央揃えにする*/
+}
+#wrap{
+  width: 320px;	   /*全体の幅を指定する*/
+  margin: 0 auto;    /*マージンの指定をする、ブラウザ対策*/
+  text-align:center;   /*全体を左揃えにする。*/
+}
+.task{
+  position: absolute;
+  width: 320px;
+  height: 427px;
+  top: 65px;
+  background: #277FBF;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  &__icon{
     position: absolute;
     width: 100px;
     height: 100px;
     left: 111px;
     top: -50px;
-  
     background: black;
     border-radius: 50%;
   }
-  ons-button{
-    position: relative;
-    width: 275px;
-    height: 44px;
-  
-    top: 525px;
-    text-align: center;
-    background: #34AAFF;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 26px;
-  }
-  p{
-    position: absolute;
-    width: 69px;
-    height: 24px;
-    left: 40px;
-    top: 196px;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 24px;
-    letter-spacing: 0.012em;
-  
-    color: #FFFFFF;
-  
-  }
-  p.title{
+  &__title{
     top: 50px;
+    &-input{
+      padding-left: 7px;
+      font-size: 18px;
+      color: white;
+      top: 110px;
+    }
   }
-  
-  p.user{
+  &__user{
     top: 142px;
+    &-input{
+      padding-left: 7px;
+      font-size: 18px;
+      color: white;
+      top: 202px;
+    }
   }
-  p.comment{
+  &__comment{
     top: 234px;
+    &-input{
+      padding-left: 7px;
+      font-size: 18px;
+      color: white;
+      position: relative;
+      width: 240px;
+      height: 90px;
+      top: 294px;
+      background: rgba(255, 255, 255, 0.27);
+      border-radius: 5px;
+    }
   }
-  
-  input{
-    position: absolute;
-    width: 240px;
-    height: 32px;
-    left: 40px;
-  
-  
-    background: rgba(255, 255, 255, 0.27);
-    border-radius: 5px;
-
-  }
-  input.title{
-    top: 110px;
-  }
-  input.user{
-    top: 202px;
-  }
-  textarea{
-    position: absolute;
-    width: 240px;
-    height: 90px;
-    left: 40px;
-    top: 294px;
-  
-    background: rgba(255, 255, 255, 0.27);
-    border-radius: 5px;
-  
-  }
+}
+ons-button{
+  position: relative;
+  width: 275px;
+  height: 44px;
+  top: 525px;
+  text-align: center;
+  background: #34AAFF;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 26px;
+}
+p{
+  position: absolute;
+  width: 69px;
+  height: 24px;
+  left: 40px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 24px;
+  letter-spacing: 0.012em;
+  color: #FFFFFF;
+}
+input{
+  position: absolute;
+  width: 240px;
+  height: 32px;
+  left: 40px;
+  background: rgba(255, 255, 255, 0.27);
+  border-radius: 5px;
+}
