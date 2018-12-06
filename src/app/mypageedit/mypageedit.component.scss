@@ -22,12 +22,20 @@ div.icon{
     &__name{
         font-size: 20px;
     }
-    &__details{
+    &__detail{
         position: relative;
         top:-10%;
         text-align: left;
         padding-left: 10%;
         font-size: 20px;
     }
-    
 }
+.user_details{
+    position: relative;
+    left: 5%;
+    margin-bottom: 8%;
+    width: 342px;
+    height: 40px;
+    background: rgba(97, 162, 208, 0.29);
+}
+
