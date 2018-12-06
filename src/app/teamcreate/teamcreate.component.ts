@@ -19,6 +19,6 @@ export class TeamcreateComponent implements OnInit {
     this.navi.nativeElement.popPage();
   }
   push(component:any) {
-    this.navi.nativeElement.pushPage(ContentComponent);
+    this.navi.nativeElement.resetToPage(ContentComponent);
   }
 }
