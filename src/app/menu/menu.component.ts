@@ -6,6 +6,7 @@ import { TASKCONTENT } from '../mock-taskcontents';
 import { ContentComponent } from '../content/content.component';
 import { USERS } from '../mock-users'
 import { ContentteamComponent } from '../contentteam/contentteam.component';
+import { ContentmypageComponent } from '../contentmypage/contentmypage.component';
 
 @Component({
   selector: 'ons-page[app-menu]',
@@ -14,7 +15,7 @@ import { ContentteamComponent } from '../contentteam/contentteam.component';
 })
 export class MenuComponent implements OnInit {
   home=ContentComponent;
-  mypage=MyPageComponent;
+  mypage=ContentmypageComponent;
   tasks=TASKCONTENT;
   users=USERS;
   addgroup=ContentteamComponent;

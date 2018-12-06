@@ -4,7 +4,7 @@
   </div>
   <div class="center">My Page</div>
   <div class="right">
-    <ons-toolbar-button>Edit</ons-toolbar-button>
+    <ons-toolbar-button (click)="pushedit()">Edit</ons-toolbar-button>
   </div>
 </ons-toolbar>
 <div class="background"></div>
@@ -18,7 +18,7 @@
   <p class="user-info__works">Works</p>
   <div class="user-info__task">
     <div class="user-info__task-item" *ngFor="let task of tasks">
-      <ons-button>
+      <ons-button (click)="pushtaskedit(task)">
         <p class="user-info__task-title">{{task.title}}</p>
         <p class="user-info__task-id">{{task.user_id}}</p>
       </ons-button>

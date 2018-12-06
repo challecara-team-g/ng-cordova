@@ -18,6 +18,8 @@ import { TaskeditComponent } from './taskedit/taskedit.component';
 import { ContentteamComponent } from './contentteam/contentteam.component';
 import { TeamplusComponent } from './teamplus/teamplus.component';
 import { TeamcreateComponent } from './teamcreate/teamcreate.component';
+import { ContentmypageComponent } from './contentmypage/contentmypage.component';
+import { MypageeditComponent } from './mypageedit/mypageedit.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { TeamcreateComponent } from './teamcreate/teamcreate.component';
     TaskeditComponent,
     ContentteamComponent,
     TeamplusComponent,
-    TeamcreateComponent
+    TeamcreateComponent,
+    ContentmypageComponent,
+    MypageeditComponent
   ],
   imports: [
     OnsenModule, // has BrowserModule internally
@@ -48,7 +52,9 @@ import { TeamcreateComponent } from './teamcreate/teamcreate.component';
     TaskeditComponent,
     ContentteamComponent,
     TeamplusComponent,
-    TeamcreateComponent
+    TeamcreateComponent,
+    ContentmypageComponent,
+    MypageeditComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

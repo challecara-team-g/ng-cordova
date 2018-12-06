@@ -1,0 +1,33 @@
+div.circle{
+    position: relative;
+    width:100%;
+    height:50%;
+    top:-125px;
+    background: #34AAFF;
+    border-radius: 50%;
+}
+div.icon{
+    position: absolute;
+    background:black;
+    width: 100px;
+    height: 100px;
+    top:83%;
+    left: 37.5%;
+    border-radius: 50%;
+}
+.user-info{
+    position: relative;
+    text-align: center;
+    top:-13%;
+    &__name{
+        font-size: 20px;
+    }
+    &__details{
+        position: relative;
+        top:-10%;
+        text-align: left;
+        padding-left: 10%;
+        font-size: 20px;
+    }
+    
+}
