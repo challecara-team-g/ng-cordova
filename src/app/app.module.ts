@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
 import { ContentComponent } from './content/content.component';
 import { MyPageComponent } from './my-page/my-page.component';
 import { TaskeditComponent } from './taskedit/taskedit.component';
+import { ContentteamComponent } from './contentteam/contentteam.component';
+import { TeamplusComponent } from './teamplus/teamplus.component';
+import { TeamcreateComponent } from './teamcreate/teamcreate.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { TaskeditComponent } from './taskedit/taskedit.component';
     TaskplusComponent,
     ContentComponent,
     MyPageComponent,
-    TaskeditComponent
+    TaskeditComponent,
+    ContentteamComponent,
+    TeamplusComponent,
+    TeamcreateComponent
   ],
   imports: [
     OnsenModule, // has BrowserModule internally
@@ -39,7 +45,10 @@ import { TaskeditComponent } from './taskedit/taskedit.component';
     TaskplusComponent,
     ContentComponent,
     MyPageComponent,
-    TaskeditComponent
+    TaskeditComponent,
+    ContentteamComponent,
+    TeamplusComponent,
+    TeamcreateComponent
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
