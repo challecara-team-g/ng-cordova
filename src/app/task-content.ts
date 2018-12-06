@@ -7,4 +7,6 @@ export class TaskContent{
   // create_at:Date;
   // update_at:Date;
   icon_id:string;
+  assign_user: string;
+  comment: string;
 }
