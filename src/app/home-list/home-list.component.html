@@ -1,0 +1,13 @@
+<div [ngSwitch]="dayOfWeek">
+  <div *ngSwitchCase="dayOfWeek">
+    <div *ngFor="let task of tasks">
+      <div *ngIf="task.day_of_week==dayOfWeek">
+        <ons-button (click)="pushtaskedit(task)" >
+          <p>{{task.title}}</p>
+          <p>{{task.detail}}</p>
+          <p>{{task.group_id}}</p>
+        </ons-button>
+      </div>
+    </div>
+  </div>
+</div>
