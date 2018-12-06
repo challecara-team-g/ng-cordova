@@ -19,6 +19,11 @@
   <div class="user-info__task">
     <div class="user-info__task-item" *ngFor="let task of tasks">
       <ons-button (click)="pushtaskedit(task)">
+        
+        <p>
+          <img src="{{task.icon_id}}">
+        </p>
+        
         <p class="user-info__task-title">{{task.title}}</p>
         <p class="user-info__task-id">{{task.user_id}}</p>
       </ons-button>

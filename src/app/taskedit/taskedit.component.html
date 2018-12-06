@@ -12,7 +12,9 @@
 </ons-toolbar>
 <div id="wrap">
   <div class="task">
-    <div class="task__icon"></div>
+
+      <img src="{{params.data.icon_id}}" class="task__icon">
+    
     <p class="task__title">Title</p>
     <input type="text" class="task__title-input" [(ngModel)]="params.data.title">
     <p class="task__user">AssignUser</p>
