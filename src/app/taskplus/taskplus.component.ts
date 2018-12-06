@@ -19,8 +19,4 @@ export class TaskplusComponent implements OnInit {
   ngOnInit() {
   }
 
-  save(): void {
-    this.taskpassService.update
-  }
-
 }
