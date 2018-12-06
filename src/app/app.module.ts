@@ -20,6 +20,7 @@ import { TeamplusComponent } from './teamplus/teamplus.component';
 import { TeamcreateComponent } from './teamcreate/teamcreate.component';
 import { ContentmypageComponent } from './contentmypage/contentmypage.component';
 import { MypageeditComponent } from './mypageedit/mypageedit.component';
+import { HomeListComponent } from './home-list/home-list.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MypageeditComponent } from './mypageedit/mypageedit.component';
     TeamplusComponent,
     TeamcreateComponent,
     ContentmypageComponent,
-    MypageeditComponent
+    MypageeditComponent,
+    HomeListComponent
   ],
   imports: [
     OnsenModule, // has BrowserModule internally
