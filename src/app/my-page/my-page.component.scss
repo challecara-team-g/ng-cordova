@@ -8,7 +8,7 @@ div.circle{
 }
 div.icon{
     position: absolute;
-    background:black;
+    background:#F4F4F4;
     width: 100px;
     height: 100px;
     top:83%;
@@ -44,11 +44,11 @@ div.icon{
         }
         &-title{
             text-align: center;
-            color: black;
+            color: #0D2A40;
             margin: 3px 0 0 0;
         }
         &-id{
-            color: black;
+            color: #0D2A40;
             text-align: center;
         }
     }
@@ -67,10 +67,14 @@ ons-button{
 }
 p{
     text-align: center;
-    color:red;
+    color:#0D2A40;
   }
 
 img{
     width: 80px;
     height: 80px;
+}
+img.faceicon{
+    width: 100px;
+    height: 100px;
 }

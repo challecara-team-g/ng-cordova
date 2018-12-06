@@ -2,7 +2,7 @@
 <div class="content">
   <ons-button (click)="load(mypage)">
     <div class="picture">
-      picture
+        <img src='../assets/image/boy.png'>
     </div>
     <p class="name">name</p>
     <p class="id">id</p>
@@ -15,7 +15,7 @@
     <!-- ↓↓↓↓ここにクリックイベント書きたい！！↓↓↓↓ -->
     <ons-button class="Group" (click)="load(home)">
       <div class="picture">
-        <img src="{{user.icon_id}}">
+          <img src='{{user.icon_id}}'>
       </div>
       <p class="id">{{user.group_id}}</p>
       <p class="name">{{user.name}}</p>
