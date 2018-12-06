@@ -8,4 +8,5 @@ export class TaskContent{
   // update_at:Date;
   icon_id:string;
   assign_user: string;
+  comment: string;
 }
