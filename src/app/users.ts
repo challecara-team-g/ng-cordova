@@ -10,4 +10,5 @@ export class Users{
     task_id:number;
     comment:string;
     comment_at:string;
+    icon_id:string;
 }
