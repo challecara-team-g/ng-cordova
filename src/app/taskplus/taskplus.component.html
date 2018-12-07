@@ -21,15 +21,15 @@
 </ons-toolbar>
 <body>
  <div id="wrap">
- <div class="box">
-   <div class="icon">
+ <div class="task-plus">
+   <div class="task-plus__icon">
    </div>
-   <p class="title">Title</p>
-   <input type="text" class="title" [(ngModel)]="task_title">
-   <p class="user">AssignUser</p>
-   <input type="text" class="user" [(ngModel)]="task_assign_user">
-   <p class="comment">Comment</p>
-   <textarea class="comment" id="" [(ngModel)]="task_comment"></textarea>
+   <p class="task-plus__title">Title</p>
+   <input type="text" class="task-plus__title-input" [(ngModel)]="task_title">
+   <p class="task-plus__user">AssignUser</p>
+   <input type="text" class="task-plus__user-input" [(ngModel)]="task_assign_user">
+   <p class="task-plus__comment">Comment</p>
+   <textarea class="task-plus__comment-input" id="" [(ngModel)]="task_comment"></textarea>
  </div>
  <ons-button class="make" (click)="pop()">Create</ons-button>
 </div>
