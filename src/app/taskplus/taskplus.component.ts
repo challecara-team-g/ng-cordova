@@ -24,7 +24,7 @@ export class TaskplusComponent implements OnInit {
 
   constructor(private navi: OnsNavigator,
     private params: Params, private taskService: TasksService, private storage: AngularFireStorage) {
-      this.profileUrl = taskService.downlodeFile('noimage.png');
+      this.profileUrl = taskService.downlodeFile('task-icon/noimage.png');
     }
   // constructor(@Inject(forwardRef(() => AppComponent)) privcate app : AppComponent) { }
   pop() {
