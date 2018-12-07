@@ -9,7 +9,7 @@ import { AngularFireStorage } from '@angular/fire/storage';
   providedIn: 'root'
 })
 export class TasksService {
-  item: Observable<TaskContent[]>;
+  tasks: Observable<TaskContent[]>;
   public content = '';
   public uploadResult: any = null;
   uploadPercent: Observable<number>;
@@ -17,9 +17,9 @@ export class TasksService {
   filename: String;
 
   constructor(private db: AngularFirestore, private storage: AngularFireStorage) {
-    this.item = db
+    this.tasks = db
     .collection<TaskContent>('tasks', ref => {
-      return ref.orderBy('date', 'asc')
+      return ref
     })
     .snapshotChanges()
     .pipe(
