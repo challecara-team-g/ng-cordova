@@ -23,7 +23,8 @@
  <div id="wrap">
  <div class="task-plus">
    <div class="task-plus__icon">
-      <img src='../assets/image/noimage.png' class="task-plus__icon-faceicon">
+      <input class="task-plus__icon-input" accept="image/*" value="" type="file" (change)="uploadFile($event)" />
+      <img [src]="profileUrl | async" class="task-plus__icon-faceicon">
    </div>
    <p class="task-plus__title">Title</p>
    <input type="text" class="task-plus__title-input" [(ngModel)]="task_title">

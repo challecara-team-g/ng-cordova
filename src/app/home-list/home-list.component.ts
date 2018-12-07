@@ -8,6 +8,8 @@ import { TaskeditComponent } from '../taskedit/taskedit.component';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AngularFireStorage } from '@angular/fire/storage';
+import { TasksService } from '../tasks.service';
 
 @Component({
   selector: 'app-home-list',
@@ -18,7 +20,9 @@ export class HomeListComponent implements OnInit {
   @Input() dayOfWeek: number;
   tasks: Observable<TaskContent[]>;
   weeks=WEEK;
-  constructor(private menuService: MenuService,private navi: OnsNavigator, private db: AngularFirestore) {
+  profileUrl: Observable<string | null>;
+
+  constructor(private menuService: MenuService,private navi: OnsNavigator, private db: AngularFirestore, private storage:AngularFireStorage, private tasksServer:TasksService) {
     this.tasks = db
     .collection<TaskContent>('tasks', ref => {
       return ref
@@ -28,11 +32,12 @@ export class HomeListComponent implements OnInit {
       map(actions => actions.map(action => {
         // 日付をセットしたコメントを返す
         const data = action.payload.doc.data();
-        console.log(data);
         const task_data = new TaskContent(
           data.day_of_week,data.title,data.title,data.icon_id,
           data.assign_user,data.comment
         );
+        console.log(data.icon_id);
+        this.profileUrl=tasksServer.downlodeFile(data.icon_id);
         task_data.setId(data.id);
         return task_data;
       })));
@@ -47,5 +52,4 @@ export class HomeListComponent implements OnInit {
   }
   ngOnInit() {
   }
-
 }
