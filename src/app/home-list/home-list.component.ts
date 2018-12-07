@@ -22,7 +22,7 @@ export class HomeListComponent implements OnInit {
   weeks=WEEK;
   profileUrl: Observable<string | null>;
 
-  constructor(private menuService: MenuService,private navi: OnsNavigator, private db: AngularFirestore, private storage:AngularFireStorage, private tasksServer:TasksService) {
+  constructor(private menuService: MenuService,private navi: OnsNavigator, private db: AngularFirestore, private storage:AngularFireStorage, private tasksService:TasksService) {
     this.tasks = db
     .collection<TaskContent>('tasks', ref => {
       return ref
@@ -37,7 +37,7 @@ export class HomeListComponent implements OnInit {
           data.assign_user,data.comment
         );
         console.log(data.icon_id);
-        this.profileUrl=tasksServer.downlodeFile(data.icon_id);
+        this.profileUrl=tasksService.downlodeFile(data.icon_id);
         task_data.setId(data.id);
         return task_data;
       })));
