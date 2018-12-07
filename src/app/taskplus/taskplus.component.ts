@@ -10,12 +10,11 @@ import { AngularFirestore } from '@angular/fire/firestore';
   styleUrls: ['./taskplus.component.scss']
 })
 export class TaskplusComponent implements OnInit {
-  date = new Date();
-  dayOfWeek = this.date.getDay();
   task_title = "";
   task_assign_user = "";
   task_comment = "";
   create_task: any;
+  dayOfWeek=this.params.data
 
   constructor(private navi: OnsNavigator,
     private params: Params, private taskService: TasksService, private db: AngularFirestore) { }
@@ -29,7 +28,7 @@ export class TaskplusComponent implements OnInit {
   }
   addTask(){
     this.create_task = new TaskContent(
-      this.dayOfWeek,this.task_title,
+      this.params.data,this.task_title,
       this.task_comment,"",this.task_assign_user,this.task_comment
     );
     this.create_task.setId(this.taskService.addTask(this.create_task));
