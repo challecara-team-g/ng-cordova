@@ -7,7 +7,7 @@
    </ons-toolbar-button>-->
   </div>
   <div class="center">
-    <ons-select >
+    <ons-select [(ngModel)]="dayOfWeek">
       <!--<option *ngFor="let week of weeks">{{week.day}}</option>-->
       <option value="0">Sunday</option>
       <option value="1">Monday</option>
@@ -16,7 +16,7 @@
       <option value="4">Thursday</option>
       <option value="5">Friday</option>
       <option value="6">Saturday</option>
-    </ons-select>   
+    </ons-select>
   </div>
 </ons-toolbar>
 <body>
@@ -25,12 +25,12 @@
    <div class="icon">
    </div>
    <p class="title">Title</p>
-   <input type="text" class="title">
+   <input type="text" class="title" [(ngModel)]="task_title">
    <p class="user">AssignUser</p>
-   <input type="text" class="user">
+   <input type="text" class="user" [(ngModel)]="task_assign_user">
    <p class="comment">Comment</p>
-   <textarea class="comment" id=""></textarea>
+   <textarea class="comment" id="" [(ngModel)]="task_comment"></textarea>
  </div>
  <ons-button class="make" (click)="pop()">Create</ons-button>
 </div>
-</body>  
+</body>

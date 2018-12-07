@@ -20,7 +20,8 @@ export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('side') side: OnsSplitterSide;
   @ViewChild('content') content: OnsSplitterContent;
 
-  constructor(private menuService: MenuService) { }
+  constructor(private menuService: MenuService) {
+   }
 
   ngOnInit() {
     this.menuService.menu$.pipe(
@@ -29,7 +30,7 @@ export class AppComponent implements OnInit, OnDestroy {
       if (menu) {
         this.side.nativeElement.open();
       } else {
-        this.side.nativeElement.close(); 
+        this.side.nativeElement.close();
       }
     });
 

@@ -2,11 +2,12 @@ import { Component, OnInit, Inject, forwardRef } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { MyPageComponent } from '../my-page/my-page.component';
 import {MenuService} from '../menu.service';
-import { TASKCONTENT } from '../mock-taskcontents';
 import { ContentComponent } from '../content/content.component';
 import { USERS } from '../mock-users'
 import { ContentteamComponent } from '../contentteam/contentteam.component';
 import { ContentmypageComponent } from '../contentmypage/contentmypage.component';
+import { Observable } from 'rxjs';
+import { TaskContent } from '../task-content';
 
 @Component({
   selector: 'ons-page[app-menu]',
@@ -16,7 +17,7 @@ import { ContentmypageComponent } from '../contentmypage/contentmypage.component
 export class MenuComponent implements OnInit {
   home=ContentComponent;
   mypage=ContentmypageComponent;
-  tasks=TASKCONTENT;
+  tasks: Observable<TaskContent[]>;
   users=USERS;
   addgroup=ContentteamComponent;
   constructor(private menuService: MenuService) { }

@@ -1,6 +1,6 @@
 <div [ngSwitch]="dayOfWeek">
   <div *ngSwitchCase="dayOfWeek">
-    <div *ngFor="let task of tasks">
+    <div *ngFor="let task of tasks | async">
       <div *ngIf="task.day_of_week==dayOfWeek">
         <ons-button (click)="pushtaskedit(task)" >
           <p>{{task.title}}</p>

@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {HttpModule} from '@angular/http';
 import {OnsenModule} from 'ngx-onsenui';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +24,8 @@ import { TeamcreateComponent } from './teamcreate/teamcreate.component';
 import { ContentmypageComponent } from './contentmypage/contentmypage.component';
 import { MypageeditComponent } from './mypageedit/mypageedit.component';
 import { HomeListComponent } from './home-list/home-list.component';
+import { environment } from './environments/environment';
+import { TasksService } from './tasks.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +48,10 @@ import { HomeListComponent } from './home-list/home-list.component';
     HttpModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireStorageModule // imports firebase/storage only needed for storage features
   ],
   entryComponents: [
     HomeComponent,
@@ -61,8 +69,11 @@ import { HomeListComponent } from './home-list/home-list.component';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,
   ],
-  providers: [MenuService],
-  
+  providers: [
+    MenuService,
+    TasksService
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
