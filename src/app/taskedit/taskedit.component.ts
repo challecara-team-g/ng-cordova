@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Params, OnsNavigator } from 'ngx-onsenui';
-import { TASKCONTENT } from '../mock-taskcontents';
 @Component({
   selector: 'ons-page[app-taskedit]',
   templateUrl: './taskedit.component.html',

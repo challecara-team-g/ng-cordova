@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MenuService } from '../menu.service';
 import { HomeComponent } from '../home/home.component';
 import { ContentComponent } from '../content/content.component';
-import { TASKCONTENT } from '../mock-taskcontents';
 import { OnsNavigator } from 'ngx-onsenui';
 import { MypageeditComponent } from '../mypageedit/mypageedit.component';
 import { TaskeditComponent } from '../taskedit/taskedit.component';
+import { Observable } from 'rxjs';
+import { TaskContent } from '../task-content';
 
 
 @Component({
@@ -14,10 +15,10 @@ import { TaskeditComponent } from '../taskedit/taskedit.component';
   styleUrls: ['./my-page.component.scss']
 })
   export class MyPageComponent implements OnInit {
-  
+
   home=HomeComponent;
-  tasks=TASKCONTENT;
-  
+  tasks: Observable<TaskContent[]>;
+
   constructor(private menuService: MenuService,private navi: OnsNavigator) { }
 
   ngOnInit() {

@@ -1,7 +1,6 @@
 import { Component, OnInit, forwardRef, Inject } from '@angular/core';
 import { AppComponent } from '../app.component';
 import { WEEK } from '../mock-weeks';
-import { TASKCONTENT } from '../mock-taskcontents';
 import { MenuService } from '../menu.service';
 import { OnsNavigator } from 'ngx-onsenui';
 import { TaskplusComponent } from '../taskplus/taskplus.component';
@@ -14,7 +13,6 @@ import { TaskeditComponent } from '../taskedit/taskedit.component';
 })
 export class HomeComponent implements OnInit {
   weeks=WEEK;
-  tasks=TASKCONTENT;
   date = new Date();
   dayOfWeek = this.date.getDay();
   constructor(private menuService: MenuService,private navi: OnsNavigator) {}
