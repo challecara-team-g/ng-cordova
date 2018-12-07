@@ -22,8 +22,9 @@ export class HomeComponent implements OnInit {
   }
 
   // constructor(@Inject(forwardRef(() => AppComponent)) private app : AppComponent) { }
-  pushtaskplus() {
-    this.navi.nativeElement.pushPage(TaskplusComponent);
+  pushtaskplus(dayOfWeek) {
+    var data = dayOfWeek
+    this.navi.nativeElement.pushPage(TaskplusComponent,{data});
   }
   pushtaskedit(task){
     var data=task;
