@@ -16,10 +16,15 @@ export class TaskeditComponent implements OnInit {
     }
   // constructor(@Inject(forwardRef(() => AppComponent)) privcate app : AppComponent) { }
 
-  pop() {
+  popDelete() {
     this.navi.nativeElement.popPage();
     console.log(this.params.data.id);
     this.taskService.deleteTask(this.params.data.id);
+  }
+  popComplete() {
+    this.navi.nativeElement.popPage();
+    console.log(this.params.data.id);
+    this.taskService.completeTask(this.params.data.id);
   }
   ngOnInit() {
   }
