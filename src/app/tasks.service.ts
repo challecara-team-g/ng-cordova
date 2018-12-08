@@ -57,7 +57,6 @@ export class TasksService {
     const filepath = fileName;
     const ref = this.storage.ref(filepath);
     this.profileUrl = ref.getDownloadURL();
-    console.log(this.profileUrl);
     return this.profileUrl;
   }
   deleteTask(key: string) { // 追加

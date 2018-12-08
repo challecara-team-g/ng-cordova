@@ -26,6 +26,7 @@ import { MypageeditComponent } from './mypageedit/mypageedit.component';
 import { HomeListComponent } from './home-list/home-list.component';
 import { environment } from './environments/environment';
 import { TasksService } from './tasks.service';
+import { TaskListItemComponent } from './task-list-item/task-list-item.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { TasksService } from './tasks.service';
     TeamcreateComponent,
     ContentmypageComponent,
     MypageeditComponent,
-    HomeListComponent
+    HomeListComponent,
+    TaskListItemComponent
   ],
   imports: [
     OnsenModule, // has BrowserModule internally

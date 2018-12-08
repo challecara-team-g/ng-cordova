@@ -36,7 +36,6 @@ export class HomeListComponent implements OnInit {
           data.day_of_week,data.title,data.title,data.icon_id,
           data.assign_user,data.comment
         );
-        console.log();
         this.profileUrl=tasksService.downlodeFile(data.icon_id);
         task_data.setId(a.payload.doc.id);
         return task_data;
@@ -45,10 +44,6 @@ export class HomeListComponent implements OnInit {
 
   pushtaskplus() {
     this.navi.nativeElement.pushPage(TaskplusComponent);
-  }
-  pushtaskedit(task){
-    var data=task;
-    this.navi.nativeElement.pushPage(TaskeditComponent,{data});
   }
   ngOnInit() {
   }

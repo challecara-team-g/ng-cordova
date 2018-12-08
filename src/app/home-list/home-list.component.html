@@ -1,13 +1,7 @@
 <div [ngSwitch]="dayOfWeek">
   <div *ngSwitchCase="dayOfWeek">
     <div *ngFor="let task of tasks | async">
-      <div *ngIf="task.day_of_week==dayOfWeek">
-        <ons-button (click)="pushtaskedit(task)" >
-          <p><img [src]="profileUrl | async"></p>
-          <p>{{task.title}}</p>
-          <p>{{task.assign_user}}</p>
-        </ons-button>
-      </div>
+      <app-task-list-item [dayOfWeek]="dayOfWeek" [task]="task"></app-task-list-item>
     </div>
   </div>
 </div>
