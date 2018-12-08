@@ -3,18 +3,23 @@ import { TaskContent } from './task-content';
 import { Observable } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TasksService {
-  item: Observable<TaskContent[]>;
+  tasks: Observable<TaskContent[]>;
   public content = '';
+  public uploadResult: any = null;
+  uploadPercent: Observable<number>;
+  profileUrl: Observable<string | null>;
+  filename: String;
 
-  constructor(private db: AngularFirestore) {
-    this.item = db
+  constructor(private db: AngularFirestore, private storage: AngularFireStorage) {
+    this.tasks = db
     .collection<TaskContent>('tasks', ref => {
-      return ref.orderBy('date', 'asc')
+      return ref
     })
     .snapshotChanges()
     .pipe(
@@ -47,5 +52,12 @@ export class TasksService {
     });
     }
     return "None"
+  }
+  downlodeFile(fileName): Observable<string | null>{
+    const filepath = fileName;
+    const ref = this.storage.ref(filepath);
+    this.profileUrl = ref.getDownloadURL();
+    console.log(this.profileUrl);
+    return this.profileUrl;
   }
 }
