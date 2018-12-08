@@ -7,7 +7,7 @@
    </ons-toolbar-button>-->
   </div>
   <div class="right">
-    <ons-toolbar-button (click)="pop()">Delete</ons-toolbar-button>
+    <ons-toolbar-button (click)="popDelete()">Delete</ons-toolbar-button>
   </div>
 </ons-toolbar>
 <div id="wrap">
@@ -20,5 +20,5 @@
     <p class="task__comment">Comment</p>
     <textarea class="task__comment-input" id="" [(ngModel)]="params.data.comment"></textarea>
   </div>
-  <ons-button class="task__make" (click)="pop()">Complete</ons-button>
+  <ons-button class="task__make" (click)="popComplete()">Complete</ons-button>
 </div>
