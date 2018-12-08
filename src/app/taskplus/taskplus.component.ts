@@ -20,11 +20,11 @@ export class TaskplusComponent implements OnInit {
   create_task: any;
   dayOfWeek=this.params.data;
   profileUrl: Observable<string | null>;
-  filename: String;
+  filename: String= 'task-icon/noimage.png';
 
   constructor(private navi: OnsNavigator,
     private params: Params, private taskService: TasksService, private storage: AngularFireStorage) {
-      this.profileUrl = taskService.downlodeFile('task-icon/noimage.png');
+      this.profileUrl = taskService.downlodeFile(this.filename);
     }
   // constructor(@Inject(forwardRef(() => AppComponent)) privcate app : AppComponent) { }
   pop() {
