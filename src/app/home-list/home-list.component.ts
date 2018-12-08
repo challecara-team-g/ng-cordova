@@ -29,16 +29,16 @@ export class HomeListComponent implements OnInit {
     })
     .snapshotChanges()
     .pipe(
-      map(actions => actions.map(action => {
+      map(actions => actions.map(a => {
         // 日付をセットしたコメントを返す
-        const data = action.payload.doc.data();
+        const data = a.payload.doc.data();
         const task_data = new TaskContent(
           data.day_of_week,data.title,data.title,data.icon_id,
           data.assign_user,data.comment
         );
-        console.log(data.icon_id);
+        console.log();
         this.profileUrl=tasksService.downlodeFile(data.icon_id);
-        task_data.setId(data.id);
+        task_data.setId(a.payload.doc.id);
         return task_data;
       })));
   }

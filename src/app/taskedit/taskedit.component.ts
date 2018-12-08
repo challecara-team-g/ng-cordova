@@ -18,6 +18,8 @@ export class TaskeditComponent implements OnInit {
 
   pop() {
     this.navi.nativeElement.popPage();
+    console.log(this.params.data.id);
+    this.taskService.deleteTask(this.params.data.id);
   }
   ngOnInit() {
   }

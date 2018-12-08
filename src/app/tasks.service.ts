@@ -60,4 +60,22 @@ export class TasksService {
     console.log(this.profileUrl);
     return this.profileUrl;
   }
+  deleteTask(key: string) { // 追加
+    this.db
+      .collection('tasks')
+      .doc(key)
+      .delete()
+      .then(() => {
+        alert('タスクがなくなりました汗');
+      });
+  }
+  completeTask(key: string) { // 追加
+    this.db
+      .collection('tasks')
+      .doc(key)
+      .delete()
+      .then(() => {
+        alert('タスクを完了しました！');
+      });
+  }
 }
